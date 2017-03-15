@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated testmodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="testmodel.presentation.TestmodelModelWizardID"
+            name="%_UI_TestmodelModelWizard_label"
+            class="testmodel.presentation.TestmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TestmodelModelFile.gif">
+         <description>%_UI_TestmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated testmodel -->
+      <editor
+            id="testmodel.presentation.TestmodelEditorID"
+            name="%_UI_TestmodelEditor_label"
+            icon="icons/full/obj16/TestmodelModelFile.gif"
+            extensions="testmodel"
+            class="testmodel.presentation.TestmodelEditor"
+            contributorClass="testmodel.presentation.TestmodelActionBarContributor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            class="testmodel.provider.FramedDiagramTypeProvider"
+            id="testmodel.provider.FramedDiagramTypeProvider"
+            name="FramedDiagramTypeProvider">
+            	<diagramType id="FRaMEDDiagramType" />
+            	<imageProvider id="testmodel.provider.FramedImageProvider" />
+      </diagramTypeProvider>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            id="FRaMEDDiagramType"
+            name="FRaMED"
+            type="FRaMEDDiagramType">
+      </diagramType>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.imageProviders">
+      <imageProvider
+            class="testmodel.provider.FramedImageProvider"
+            id="testmodel.provider.FramedImageProvider">
+      </imageProvider>
+   </extension>
+
+</plugin>

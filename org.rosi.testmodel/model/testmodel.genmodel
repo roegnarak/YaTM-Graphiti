@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.rosi.testmodel/src" modelPluginID="org.rosi.testmodel"
+    modelName="Testmodel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>testmodel.ecore</foreignModel>
+  <genPackages prefix="Testmodel" disposableProviderFactory="true" ecorePackage="testmodel.ecore#/">
+    <genClasses ecoreClass="testmodel.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference testmodel.ecore#//Model/elements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="testmodel.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testmodel.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="testmodel.ecore#//ModelElement"/>
+    <genClasses ecoreClass="testmodel.ecore#//TypedElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference testmodel.ecore#//TypedElement/type"/>
+    </genClasses>
+    <genClasses ecoreClass="testmodel.ecore#//Class">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference testmodel.ecore#//Class/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="testmodel.ecore#//Attribute">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference testmodel.ecore#//Attribute/owner"/>
+    </genClasses>
+    <genClasses ecoreClass="testmodel.ecore#//Group"/>
+    <genClasses ecoreClass="testmodel.ecore#//Association">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testmodel.ecore#//Association/firstLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testmodel.ecore#//Association/secondLabel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference testmodel.ecore#//Association/first"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference testmodel.ecore#//Association/second"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
